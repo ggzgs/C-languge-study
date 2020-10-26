@@ -11,10 +11,10 @@ int main()
 
 	char ch;
 	bool isspace = 1; 
-	int record = 1;   //ÁÙÊ±¼ÇÂ¼³¤¶È
+	int record = 1;   //ä¸´æ—¶è®°å½•é•¿åº¦
 	int length[11];
 	
-	for (int i = 0; i < 11; ++i)   //¼ÇÂ¼³¤¶È1-10+µÄµ¥´ÊµÄ¸öÊı
+	for (int i = 0; i < 11; ++i)   //è®°å½•é•¿åº¦1-10+çš„å•è¯çš„ä¸ªæ•°
 		length[i] = 0;
 
 	ch = fgetc(fp);
@@ -41,7 +41,7 @@ int main()
 
 		ch = fgetc(fp);
 	}
-	//ÏÔÊ¾Ö±·½Í¼
+	//æ˜¾ç¤ºç›´æ–¹å›¾
 	for (int i = 0; i < 11; ++i)
 	{
 		if (i == 10)
@@ -60,16 +60,16 @@ int main()
 		putchar('\n');
 	}
 
-	printf("\n´¹Ö±Ö±·½Í¼\n");
+	printf("\nå‚ç›´ç›´æ–¹å›¾\n");
 	
 	int max = 0;
-	for (int i = 0; i < 11; ++i)   //ÕÒ×î´óÆµÊı
+	for (int i = 0; i < 11; ++i)   //æ‰¾æœ€å¤§é¢‘æ•°
 		if (max < length[i])
 			max = length[i];
 
 	for (int i = max; i >0; --i)
 	{
-		//×öÃ¿Ò»ĞĞµÄÖ±·½Í¼
+		//åšæ¯ä¸€è¡Œçš„ç›´æ–¹å›¾
 		putchar(' ');
 		for (int j = 0; j < 41; ++j)
 		{
